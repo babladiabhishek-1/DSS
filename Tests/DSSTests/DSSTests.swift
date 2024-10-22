@@ -1,8 +1,8 @@
-import Testing
 import XCTest
 @testable import DSS
+
 final class FigmaAPIManagerTests: XCTestCase {
-    func testFetchFigmaData() async {
+    func testFetchFigmaData() async throws {
         // Arrange
         let manager = FigmaAPIManager.shared
 
