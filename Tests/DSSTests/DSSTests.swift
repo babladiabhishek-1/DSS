@@ -1,6 +1,16 @@
 import Testing
+import XCTest
 @testable import DSS
+final class FigmaAPIManagerTests: XCTestCase {
+    func testFetchFigmaData() async {
+        // Arrange
+        let manager = FigmaAPIManager.shared
 
-@Test func example() async throws {
-    // Write your test here and use APIs like `#expect(...)` to check expected conditions.
+        // Act
+        await manager.fetchFigmaData()
+
+        // Assert
+        XCTAssertFalse(manager.textStyles.isEmpty, "Text styles should not be empty after fetching data.")
+        XCTAssertFalse(manager.colors.isEmpty, "Colors should not be empty after fetching data.")
+    }
 }
