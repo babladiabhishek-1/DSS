@@ -5,6 +5,10 @@ import PackageDescription
 
 let package = Package(
     name: "DSS",
+    platforms: [
+        .iOS(.v15),    // Specify the minimum iOS version
+        .macOS(.v12)   // Specify the minimum macOS version
+    ],
     products: [
         // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
